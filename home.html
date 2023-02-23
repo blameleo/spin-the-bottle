@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spin the bottle</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>spin the bottle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,100;1,500&family=Rubik+80s+Fade&display=swap"
+    rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,100;1,500&family=Rubik+80s+Fade&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/output.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body class="font-roboto text-focus-in bg-gradient-to-r from-slate-100 to-yellow-200 hover:bg-red-400 border-red-500">
+<body class="font-roboto min-h-screen text-white bg-[url('/background.jpg')] bg-contain">
+  <div class="grid grid-cols-4 min-h-screen justify-items-center">
+    <div class="col-span-1 px-3 backdrop-blur-xl bg-slate-900/70 hidden sm:block">
+      <h1 class="py-3 text-center font-bold text-3xl heading">spin the bottle</h1>
 
-    <div class="px-10">
-        <h1 class="py-5 text-transparent bg-clip-text text-center text-3xl bg-gradient-to-r from-red-500 to-blue-500">
-            Group 4 spin the bottle game
-          </h1>
-      
-          <div class="flex justify-center  ">
-          <input id="names" class="w-2/6 p-3 rounded-l-xl border border-red-500 border-r-0" placeholder="add players names..." type="text">
-          <button id="addPlayer" class=" border rounded-r-xl text-red-50 font-bold bg-gradient-to-r from-red-500 to-orange-500 hover:bg-red-400 border-red-500 px-2">add player</button>
-          </div>
-      
-          <div class="my-6">
-
-            <img
-              id="bottle"
-              class="cursor-pointer w-28 mx-auto"
-              src="./images/bottle.PNG"
-              alt="bottle"
-            onclick="spinBottle()"/>
-
-          </div>
-
-          <div id="dare"></div>
-      
-          <a
-            id="spin"
-            class="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 cursor-pointer shadow-2xl bg-gradient-to-r from-yellow-500 to-red-500 rounded-2xl hover:shadow text-white tracking-wider font-black w-64 mx-auto p-3 flex justify-center hover:bg-teal-400"
-            >SPIN</a
-          >
-      
+      <div class="flex justify-between">
+        <input id="names" class="w-4/6 outline-none p-3 border-b border-gray-600 bg-white/0" placeholder="add players.."
+          type="text" />
+        <button id="addPlayer" type="button"
+          class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+          add
+        </button>
+      </div>
     </div>
-   
-    <script src="game.js" defer></script>
-  </body>
+
+    <div  class="col-span-3   ">
+      <img id="bottle" class="cursor-pointer w-28 mx-auto mt-10 " src="./images/bottle.PNG" alt="bottle"
+        onclick="spinBottle()" />
+
+        <div id="dare" class="m-0 py-2"></div>
+      <div class="flex justify-center my-10">
+        <button id="spin"
+          class=" relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+          <span
+            class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            spin bottle
+          </span>
+        </button>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="game.js" defer></script>
+</body>
+
 </html>
