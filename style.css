@@ -4,6 +4,11 @@
   
 }
 
+  li{
+    font-family: 'Tilt Prism', cursive;
+
+  }
+
 .spin {
   animation-name: spin;
   animation-duration: 500ms;
