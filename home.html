@@ -12,39 +12,38 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,100;1,500&family=Rubik+80s+Fade&display=swap"
     rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/output.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="text-focus-in font-roboto min-h-screen text-white bg-[url('/background.jpg')] bg-contain">
-  <div class="grid grid-cols-4 min-h-screen justify-items-center">
-    <div class="col-span-1 px-3 backdrop-blur-xl bg-slate-900/70 hidden sm:block">
+  <div class=" sm:grid grid-cols-4 min-h-screen justify-items-between">
+    <div class="  col-span-1 px-3 backdrop-blur-xl bg-slate-900/70 m-0">
       <h1 class="py-3 text-center font-bold text-3xl heading">spin the bottle</h1>
 
-      <div>
+      <div class="">
         <form class="flex justify-between">
-          <input id="names"  class="w-4/6 outline-none p-3 border-b border-gray-600 bg-white/0" placeholder="add players.."
-            type="text" />
+          <input id="names" class="w-4/6 outline-none p-3 border-b border-gray-600 bg-white/0"
+            placeholder="add players.." type="text" />
           <input type="submit" id="addPlayer" value="add"
-            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-            
+            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 ">
+
           </input>
-      
+
         </form>
         <p class="checker inline-block text-sm text-red-500"></p>
       </div>
-  
-    <div id="display"></div>
-  </div>
 
-    <div  class="col-span-3   ">
-      <img id="bottle" class="cursor-pointer w-28 mx-auto mt-10 " src="./images/bottle.PNG" alt="bottle"
-         />
+      <div id="display"></div>
+    </div>
 
-        <div id="dare" class="m-0 py-2"></div>
+    <div class="col-span-3   ">
+      <img id="bottle" class="cursor-pointer w-28 mx-auto mt-10 " src="./images/bottle.PNG" alt="bottle" />
+
+      <div id="dare" class="m-0 py-2"></div>
       <div class="flex justify-center my-10">
         <button id="spin"
           class=" relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
@@ -53,7 +52,7 @@
             spin bottle
           </span>
         </button>
-       
+
 
       </div>
       <div id="dis">
@@ -63,7 +62,7 @@
 
     </div>
   </div>
-  
+
 
   <script src="game.js" defer></script>
 </body>

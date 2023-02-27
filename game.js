@@ -1,9 +1,9 @@
 let names = [];
-let addBtn = document.getElementById("addPlayer");
-let input = document.getElementById("names");
-let displayEl = document.getElementById("display");
-let spinBtn = document.getElementById("spin");
-let dareEl = document.getElementById("dis");
+const addBtn = document.getElementById("addPlayer");
+const input = document.getElementById("names");
+const displayEl = document.getElementById("display");
+const spinBtn = document.getElementById("spin");
+const dareEl = document.getElementById("dis");
 const bottle = document.getElementById("bottle");
 
 addBtn.addEventListener("click", (e)=>{
@@ -19,24 +19,25 @@ function addNames() {
     names.push(input.value);
     input.value = "";
 
-    renderList();
+    renderNames();
   }
 }
 
-function renderList() {
+function renderNames() {
   let listNames = "";
   for (name of names) {
     listNames += `
             
-            <li class=" font-bold text-transparent text-lg  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 border rounded text-center px-5 pl-0 mb-2 border-pink-500  ">
+            <li class=" font-bold text-transparent text-lg  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 border rounded text-center px-5  mb-2 mx-2 border-pink-500  ">
               ${name}   
             </li>
         `;
   }
   displayEl.innerHTML = `
-    <div class="text-2xl flex flex-col justify-center items-center  mt-40">
+    <div class="text-2xl   sm:mt-40">
     <h3>Current players :</h3>
-    ${listNames} 
+    <ul class='flex flex-wrap sm:flex-col justify-center items-center'>    ${listNames} 
+    </ul>
     </div>
     `;
 }
