@@ -68,13 +68,23 @@ function random() {
 function pickName() {
   let name1 = names[random()];
   let name2 = names[random()];
-  if (name1 !== name2) {
-    dareEl.innerHTML = `<p class="fade-in bg-zinc-900 border-t-4 border-t-pink-600 px-3 p-2 rounded text-center ">${name1} <span class="text-red-500">dares</span>  ${name2}</p>`;
-  } else if (name1 == name2) {
-    name1 = names[random()];
-    name2 = names[random()];
+  fetch('https://api.truthordarebot.xyz/api/dare')
+  .then(res=> res.json())
+  .then(data=> {
     if (name1 !== name2) {
-      dareEl.innerHTML = `<p class="fade-in bg-zinc-900 border-t-4 border-t-pink-600 px-3 p-2 rounded text-center ">${name1} <span class="text-red-500">dares</span>  ${name2}</p>`;
+      dareEl.innerHTML = `<p class="fade-in bg-zinc-900 border-t-4 border-t-pink-600 px-3 p-2 rounded text-center ">${name1} <span class="text-red-500">dares</span>  ${name2} to ${data.question}</p>`;
+    } else if (name1 == name2) {
+      name1 = names[random()];
+      name2 = names[random()];
+      if (name1 !== name2) {
+        dareEl.innerHTML = `<p class="fade-in bg-zinc-900 border-t-4 border-t-pink-600 px-3 p-2 rounded text-center ">${name1} <span class="text-red-500">dares</span>  ${name2} to ${data.question}</p>`;
+      }
     }
-  }
+
+
+  })
+
+
 }
+
+
