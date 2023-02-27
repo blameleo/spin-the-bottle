@@ -6,7 +6,10 @@ let spinBtn = document.getElementById("spin");
 let dareEl = document.getElementById("dis");
 const bottle = document.getElementById("bottle");
 
-addBtn.addEventListener("click", addNames);
+addBtn.addEventListener("click", (e)=>{
+  e.preventDefault()
+  addNames()
+});
 spinBtn.addEventListener("click", spin);
 function addNames() {
   if (input.value == "") {
@@ -25,14 +28,15 @@ function renderList() {
   for (name of names) {
     listNames += `
             
-            <li class="font-bold text-transparent text-lg  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 border rounded text-center px-5 pl-0 mb-2 border-pink-500  ">
+            <li class=" font-bold text-transparent text-lg  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 border rounded text-center px-5 pl-0 mb-2 border-pink-500  ">
               ${name}   
             </li>
         `;
   }
   displayEl.innerHTML = `
     <div class="text-2xl flex flex-col justify-center items-center  mt-40">
-    <h3>Current players :</h3>${listNames} 
+    <h3>Current players :</h3>
+    ${listNames} 
     </div>
     `;
 }
@@ -49,7 +53,10 @@ function spin() {
 }
 
 function pause() {
+
   bottle.classList.add("pause");
+  
+
   pickName();
 }
 

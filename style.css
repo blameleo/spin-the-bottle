@@ -10,18 +10,25 @@
   }
 
 .spin {
-  animation-name: spin;
-  animation-duration: 500ms;
-  animation-iteration-count: infinite;
+   animation-name: spin;
+  animation-duration: 800ms;
+   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
-  /* transform: rotate(0.3rad);/ */
-  /* transform: rotate(3grad); */
-  /* transform: rotate(.03turn);  */
+
+
 }
+
+/* .delay {
+  animation-delay: 0s;  
+} */
 
 .pause {
     animation-play-state: paused;
+
+  
+  
+
 }
 
 
