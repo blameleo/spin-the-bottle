@@ -79,3 +79,7 @@
   }
 }
   
+
+#bottle {
+  transition: transform 4000ms ease-in-out;
+}

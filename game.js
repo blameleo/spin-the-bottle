@@ -5,6 +5,9 @@ let displayEl= document.getElementById("display")
 let spinEl=document.getElementById("spin")
 let dareEl = document.getElementById("dis")
 
+let angle = 0
+const bottle = document.getElementById("bottle")
+
 
 addBtn.addEventListener("click", function(){
     
@@ -37,7 +40,7 @@ function renderList(){
 
 
 
- spinEl.addEventListener("click",function(){
+ spinEl.addEventListener("click",function(){ 
 let random1=Math.floor(Math.random()*names.length)
 let random2= Math.floor(Math.random()*names.length)
 let player1=names[random1]
@@ -52,6 +55,13 @@ let player2=names[random2]
     }
 
     
+// angle = angle + Math.random() * 360
+angle = angle + 1000 + Math.floor(Math.random() * 361)
+bottle.style.transform = `rotate(${angle}deg)`
    
-    
+  
 })
+
+
+
+
